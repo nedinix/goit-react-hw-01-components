@@ -1,8 +1,10 @@
+import { StyledSection, StyledSectionHeader } from './Section.styled';
+
 export default function Section({ title, children }) {
   return (
-    <section>
-      {title && <h2>{title}</h2>}
+    <StyledSection>
+      {title && <StyledSectionHeader>{title}</StyledSectionHeader>}
       {children}
-    </section>
+    </StyledSection>
   );
 }

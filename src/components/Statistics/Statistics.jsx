@@ -1,17 +1,22 @@
 import StatisticsItem from './StatisticsItem';
+import {
+  StyledStatistics,
+  StyledStatisticsList,
+  StyledStatisticsTitle,
+} from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">Upload stats</h2>}
-      <ul class="stat-list">
+    <StyledStatistics>
+      {title && <StyledStatisticsTitle>Upload stats</StyledStatisticsTitle>}
+      <StyledStatisticsList>
         {stats.map(({ id, label, percentage }) => {
           return (
             <StatisticsItem key={id} label={label} percentage={percentage} />
           );
         })}
-      </ul>
-    </section>
+      </StyledStatisticsList>
+    </StyledStatistics>
   );
 };
 
