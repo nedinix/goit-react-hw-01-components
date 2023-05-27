@@ -1,4 +1,4 @@
-const FriendListItem = ({ avatar, name, isOnline }) => {
+export default function FriendListItem({ avatar, name, isOnline }) {
   return (
     <li class="item">
       <span class="status">{isOnline}</span>
@@ -6,6 +6,4 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
       <p class="name">{name}</p>
     </li>
   );
-};
-
-export default FriendListItem;
+}
