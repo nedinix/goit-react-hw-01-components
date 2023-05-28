@@ -39,6 +39,7 @@ export const StyledFriendListItem = styled.li`
   &:hover,
   &:focus {
     transform: scale(1);
+    background-color: #fbfeff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
       rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
