@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import friends from 'data/friends.json';
 
 export const StyledFriendList = styled.ul`
   max-width: 300px;
