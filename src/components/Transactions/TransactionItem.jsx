@@ -1,4 +1,4 @@
-const TransactionItem = ({ type, amount, currency }) => {
+export default function TransactionItem({ type, amount, currency }) {
   return (
     <tr>
       <td>{type}</td>
@@ -6,6 +6,4 @@ const TransactionItem = ({ type, amount, currency }) => {
       <td>{currency}</td>
     </tr>
   );
-};
-
-export default TransactionItem;
+}

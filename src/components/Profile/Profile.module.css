@@ -1,0 +1,125 @@
+.profile {
+  max-width: 300px;
+  margin: 0 auto;
+
+  background-color: #f4fbfd;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 4px;
+  transform: scale(0.99);
+  transition: background-color 250ms cubic-bezier(0.13, 0.62, 0.66, 0.26),
+    box-shadow 100ms cubic-bezier(0.13, 0.62, 0.66, 0.26),
+    transform 100ms cubic-bezier(0.13, 0.62, 0.66, 0.26);
+  overflow: hidden;
+}
+
+.profile:hover,
+.profile:focus {
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: #fbfeff;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+  padding: 12px;
+  opacity: 0.9;
+  transition: opacity 250ms cubic-bezier(0.13, 0.62, 0.66, 0.26);
+}
+
+.profile:hover .description,
+.profile:focus .description {
+  opacity: 1;
+}
+
+.description p:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.avatar {
+  display: block;
+  width: 120px;
+  height: auto;
+
+  max-width: 300px;
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.tag,
+.location {
+  font-size: 14px;
+  color: #383838a1;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+}
+
+.stats_item {
+  flex-basis: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: #e2eff38f;
+  border-top: 1px solid #b3bcbe44;
+
+  transition: background-color 250ms cubic-bezier(0.13, 0.62, 0.66, 0.26),
+    box-shadow 100ms cubic-bezier(0.13, 0.62, 0.66, 0.26);
+}
+
+.stats_item:hover,
+.stats_item:focus {
+  background-color: #f1f8fad5;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.stats_item:not(:last-child) {
+  border-right: 1px solid #b3bcbe44;
+}
+
+.quantity {
+  font-weight: 700;
+  color: rgba(36, 36, 36, 0.575);
+
+  transition: color 250ms cubic-bezier(0.13, 0.62, 0.66, 0.26);
+}
+
+.label {
+  color: #38383863;
+  margin-bottom: 4px;
+
+  transition: color 250ms cubic-bezier(0.13, 0.62, 0.66, 0.26);
+}
+
+.stats_item:hover .quantity,
+.stats_item:focus .quantity {
+  color: rgba(36, 36, 36, 0.822);
+}
+
+.stats_item:hover .label,
+.stats_item:focus .label {
+  color: #383838a1;
+}

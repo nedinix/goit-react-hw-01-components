@@ -1,10 +1,10 @@
-const StatisticsItem = ({ label, percentage }) => {
-  return (
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
-    </li>
-  );
-};
+import { StyledStatisticsItem } from './Statistics.styled';
 
-export default StatisticsItem;
+export default function StatisticsItem({ label, percentage }) {
+  return (
+    <StyledStatisticsItem>
+      <span>{label}</span>
+      <span>{percentage}%</span>
+    </StyledStatisticsItem>
+  );
+}

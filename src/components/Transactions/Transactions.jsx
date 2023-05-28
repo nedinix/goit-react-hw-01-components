@@ -1,6 +1,6 @@
 import TransactionHistory from './TransactionHistory';
 
-const Transactions = ({ items }) => {
+export default function Transactions({ items }) {
   return (
     <table class="transaction-history">
       <thead>
@@ -16,6 +16,4 @@ const Transactions = ({ items }) => {
       </tbody>
     </table>
   );
-};
-
-export default Transactions;
+}

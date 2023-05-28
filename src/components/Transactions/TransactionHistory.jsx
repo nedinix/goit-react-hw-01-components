@@ -1,6 +1,6 @@
 import TransactionItem from './TransactionItem';
 
-const TransactionHistory = ({ items }) => {
+export default function TransactionHistory({ items }) {
   return items.map(({ id, type, amount, currency }) => {
     return (
       <TransactionItem
@@ -11,6 +11,4 @@ const TransactionHistory = ({ items }) => {
       />
     );
   });
-};
-
-export default TransactionHistory;
+}
