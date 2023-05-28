@@ -6,7 +6,7 @@ export const StyledSection = styled.section`
 `;
 
 export const StyledSectionHeader = styled.h2`
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 
   text-align: center;
   color: #383838bb;
