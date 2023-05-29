@@ -1,23 +1,16 @@
-import StatisticsItem from './StatisticsItem';
-import {
-  StyledStatistics,
-  StyledStatisticsList,
-  StyledStatisticsTitle,
-} from './Statistics.styled';
+import StatisticsList from './StatisticsList';
+import { StyledStatistics, StyledStatisticsTitle } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
-const Statistics = ({ title, stats }) => {
+export default function Statistics({ title, stats }) {
   return (
     <StyledStatistics>
       {title && <StyledStatisticsTitle>Upload stats</StyledStatisticsTitle>}
-      <StyledStatisticsList>
-        {stats.map(({ id, label, percentage }) => {
-          return (
-            <StatisticsItem key={id} label={label} percentage={percentage} />
-          );
-        })}
-      </StyledStatisticsList>
+      <StatisticsList data={stats} />
     </StyledStatistics>
   );
-};
+}
 
-export default Statistics;
+Statistics.propTypes = {
+  title: PropTypes.string,
+};
