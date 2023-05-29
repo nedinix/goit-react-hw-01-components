@@ -3,6 +3,7 @@ import {
   StyledFriendStatus,
   StyledFriendAvatar,
 } from './FriendList.styled';
+import PropTypes from 'prop-types';
 
 export default function FriendListItem({ avatar, name, isOnline }) {
   return (
@@ -15,3 +16,9 @@ export default function FriendListItem({ avatar, name, isOnline }) {
     </StyledFriendListItem>
   );
 }
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+};
