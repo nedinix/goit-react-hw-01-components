@@ -1,4 +1,5 @@
 import { StyledSection, StyledSectionHeader } from './Section.styled';
+import PropTypes from 'prop-types';
 
 export default function Section({ title, children }) {
   return (
@@ -8,3 +9,7 @@ export default function Section({ title, children }) {
     </StyledSection>
   );
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+};
