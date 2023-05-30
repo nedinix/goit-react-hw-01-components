@@ -1,4 +1,5 @@
 import TransactionItem from './TransactionItem';
+import PropTypes from 'prop-types';
 
 export default function TransactionHistory({ items }) {
   return items.map(({ id, type, amount, currency }) => {
@@ -12,3 +13,14 @@ export default function TransactionHistory({ items }) {
     );
   });
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ).isRequired,
+};
