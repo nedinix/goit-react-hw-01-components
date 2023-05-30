@@ -1,10 +1,10 @@
 import { StyledStatisticsList } from './Statistics.styled';
 import StatisticsItem from './StatisticsItem';
 
-export default function StatisticsList({ data }) {
+export default function StatisticsList({ stats }) {
   return (
     <StyledStatisticsList>
-      {data.map(({ id, label, percentage }) => (
+      {stats.map(({ id, label, percentage }) => (
         <StatisticsItem key={id} label={label} percentage={percentage} />
       ))}
     </StyledStatisticsList>

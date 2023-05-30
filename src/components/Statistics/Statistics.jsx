@@ -6,11 +6,18 @@ export default function Statistics({ title, stats }) {
   return (
     <StyledStatistics>
       {title && <StyledStatisticsTitle>Upload stats</StyledStatisticsTitle>}
-      <StatisticsList data={stats} />
+      <StatisticsList stats={stats} />
     </StyledStatistics>
   );
 }
 
 Statistics.propTypes = {
   title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
